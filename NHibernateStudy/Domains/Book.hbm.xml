@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Domains" namespace="Domains">
+  <class name="Book" table="Book" lazy="1">
+    <composite-id name="Id" class="BookId" >
+      <key-property name="Name" type="string">
+        <column name="Name" length="50"/>
+      </key-property>
+
+      <key-property name="Author" type="string">
+        <column name="Author" length="50"/>
+      </key-property>
+    </composite-id>
+
+    <property name="Price" type="int" column="Price" not-null="0"/>
+  </class>
+</hibernate-mapping>

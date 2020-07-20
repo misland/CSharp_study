@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NHibernateApp" namespace="NHibernateApp">
+  <class name="Customer" table="Customer">
+    <id name="Id" type="int">
+      <generator class="native"/>
+    </id>
+
+    <version name="VersionID"/>
+    <property name="FirstName" column="FirstName" length="100" not-null ="1"/>
+    <property name="LastName" not-null="true" length="100"/>
+    <property name="AverageRating"/>
+    <property name="Points"/>
+    <property name="HasGoldStatus"/>
+    <property name="MemberSince" />
+    <property name="CreditRating" type="CustomerCreditRating"/>
+    <property name="Street"/>
+    <property name="City"/>
+    <property name="Province"/>
+    <property name="Country"/>
+  </class>
+
+  <!--cache-mode一般使用normal（默认方式），从二级缓存中读写。 
+  cache-mode有五个枚举值 ： 
+  Ignore：不使用二级缓存
+  Put：只向二级缓存写数据
+  Get：只向二级缓存读数据
+  Normal：向二级缓存读和写数据
+  Refresh：每次强制刷新二级缓存-->     
+  <query cacheable="1" cache-mode="normal" name="select_customer">
+    from Customer where id>5
+  </query>
+</hibernate-mapping>

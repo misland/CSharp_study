@@ -1,0 +1,42 @@
+﻿@model IEnumerable<EF.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Add Course","../Course/Create")
+</p>
+<p>
+    @Html.ActionLink("Trip","Index","Trips")
+</p>
+<p>
+    @Html.ActionLink("Activity","Index","Activities")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SId })
+        </td>
+    </tr>
+}
+
+</table>
