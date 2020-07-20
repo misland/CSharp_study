@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.net
+		http://www.springframework.net/xsd/spring-objects.xsd">
+  <!--使用构造器创建-->
+  <object id="PersonDao" type="Lesson4CreateObject.Dao.PersonDao,Lesson4CreateObject"/>
+  <object id="DogDao" type="Lesson4CreateObject.Dao.DogDao,Lesson4CreateObject"/>
+  <object id="Poodle" type="Lesson4CreateObject.Dao.DogDao+Poodle,Lesson4CreateObject"/>
+  <!--通过静态工厂类创建实例，注意工厂类必须是static,factory-method属性来表示创建类的工厂方法
+      这样当用GetObject方法时，会自动调用工厂方法创建类实例-->
+  <object id="staticObjectFactory" type="Lesson4CreateObject.Factory.StaticObjectFactory,Lesson4CreateObject" 
+          factory-method="GetInstance"/>
+  <!--下面这两个实例工厂方法，这里的工厂类不是static，要调用工厂方法需要先创建工厂类的实例
+      先定义工厂方法，然后用factory-object属性来定义工厂类，factory-method属性定义工厂方法
+      当spring调用instancePerson时会自动创建工厂类然后调用工厂方法来创建实例-->
+  <object id="instanceObjectFactory" type="Lesson4CreateObject.Factory.InstanceObjectFactory,Lesson4CreateObject"/>
+  <object id="instancePerson" factory-method="GetInstance" factory-object="instanceObjectFactory"/>
+  <!--创建泛型类，需要注意的是xml文件中不能直接用<,会被识别为不于号，所以用&lg;来表示小括号-->
+  <object id="geneericClass" type="Lesson4CreateObject.Infrastruct.GenericClass&lt;int>,Lesson4CreateObject"/>
+</objects>

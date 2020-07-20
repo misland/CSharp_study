@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson3SimpleIOCFramework", "Lesson3SimpleIOCFramework\Lesson3SimpleIOCFramework.csproj", "{D76DB897-DED3-4499-B338-27E1D3C87E26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson4CreateObject", "Lesson4CreateObject\Lesson4CreateObject.csproj", "{1F612F64-C1A6-472F-A93E-B347DB91348F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5Scope", "Lesson5Scope\Lesson5Scope.csproj", "{99070F95-599C-4B47-B506-D99722DCF135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson6DI", "Lesson6DI\Lesson6DI.csproj", "{6CEA2734-DCCF-47D9-AF81-CAF8284AC9DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D76DB897-DED3-4499-B338-27E1D3C87E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76DB897-DED3-4499-B338-27E1D3C87E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76DB897-DED3-4499-B338-27E1D3C87E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76DB897-DED3-4499-B338-27E1D3C87E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F612F64-C1A6-472F-A93E-B347DB91348F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F612F64-C1A6-472F-A93E-B347DB91348F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F612F64-C1A6-472F-A93E-B347DB91348F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F612F64-C1A6-472F-A93E-B347DB91348F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99070F95-599C-4B47-B506-D99722DCF135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99070F95-599C-4B47-B506-D99722DCF135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99070F95-599C-4B47-B506-D99722DCF135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99070F95-599C-4B47-B506-D99722DCF135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CEA2734-DCCF-47D9-AF81-CAF8284AC9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CEA2734-DCCF-47D9-AF81-CAF8284AC9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CEA2734-DCCF-47D9-AF81-CAF8284AC9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CEA2734-DCCF-47D9-AF81-CAF8284AC9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

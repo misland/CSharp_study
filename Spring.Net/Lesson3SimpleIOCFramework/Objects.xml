@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object id="PersonDao" type="Lesson3SimpleIOCFramework.Dao.PersonDao,Lesson3SimpleIOCFramework"/>
+</objects>

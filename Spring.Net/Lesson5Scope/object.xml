@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.net
+		http://www.springframework.net/xsd/spring-objects.xsd">
+  <!--Spring.Net默认为singleton，即单例模式-->
+  <object id="PersonDao" type="Lesson5Scope.Dao.PersonDao,Lesson5Scope" />
+  <!--当不为singleton时，每次都会重新创建新对象实例-->
+  <object id="Person" type="Lesson5Scope.Dao.Person,Lesson5Scope" singleton="false"/>
+  <!--lazy-init属性是指：当Spring.NET容器初始化的时候标注该属性的对象将被实例化，反之则是调用GetObject方法的时候才被实例化。-->
+  <object id="PersonServer" type="Lesson5Scope.Dao.PersonServer,Lesson5Scope" lazy-init="true"/>
+</objects>
